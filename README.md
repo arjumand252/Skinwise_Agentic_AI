@@ -29,7 +29,7 @@ Model: LLaMA 3.3 70B via Groq API
 
 ## 📸 Preview
 
-![Skinwise UI Preview](path/to/screenshot.png)
+![Skinwise UI Preview]([path/to/screenshot.png](https://github.com/arjumand252/Skinwise_Agentic_AI/blob/main/Skinwise%20Agentic%20AI%20-%20Google%20Chrome%202025-06-22%2019-50-18.mp4%20(1).gif))
 
 ---
 
@@ -38,6 +38,7 @@ Model: LLaMA 3.3 70B via Groq API
 ### 1. Clone the Repo
 
 git clone [https://github.com/your-username/skinwise.git](https://github.com/arjumand252/Skinwise_Agentic_AI.git)
+
 cd skinwise
 
 ### 2. Backend Setup
@@ -50,12 +51,16 @@ pip install -r requirements.txt
 
 ### 3. Create a .env file
 
+```bash
 GROQ_API_KEY=your-groq-key
 SERPAPI_API_KEY=your-serpapi-key
+```
 
 ### 4. Setup the Flask server
 
+```bash
 python app.py
+```
 
 ### 5. Frontend Setup
 
