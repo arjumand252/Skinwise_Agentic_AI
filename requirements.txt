@@ -1,0 +1,10 @@
+phidata
+python-dotenv
+groq
+wikipedia
+asyncio
+crawl4ai
+baidusearch
+pycountry
+streamlit
+flask
