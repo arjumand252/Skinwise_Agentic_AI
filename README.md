@@ -29,7 +29,7 @@ Model: LLaMA 3.3 70B via Groq API
 
 ## 📸 Preview
 
-![Skinwise UI Preview 2] (Skinwise Agentic AI - Google Chrome 2025-06-22 19-50-18.mp4.gif)
+![Skinwise UI Preview 2](Skinwise Agentic AI - Google Chrome 2025-06-22 19-50-18.mp4.gif)
 
 
 ![Skinwise UI Preview](Skinwise Agentic AI - Google Chrome 2025-06-22 19-50-18.mp4 (1).gif)
