@@ -3,6 +3,7 @@ from phi.model.groq import Groq
 from phi.tools.wikipedia import WikipediaTools
 from phi.tools.crawl4ai_tools import Crawl4aiTools
 from phi.tools.baidusearch import BaiduSearch
+from phi.tools.firecrawl import FirecrawlTools
 # import streamlit as st
 import os
 from dotenv import load_dotenv
@@ -32,6 +33,22 @@ crawl_agent = Agent(
     show_tool_calls = True,
 )
 
+ecom_agent = Agent(
+    name = "Shopping Agent",
+    model = Groq(id = "llama-3.3-70b-versatile"),
+    instructions=[
+        "You are a product recommender agent specializing in finding skincare products that match user preferences.",
+        "Prioritize finding products that satisfy as many user requirements as possible, but ensure a minimum match of 50%.",
+        "Search for products only from authentic and trusted e-commerce websites such as Google Shopping, Amazon, Flipkart, Myntra, and Nyka.",
+        "Verify that each product recommendation is in stock and available for purchase.",
+        "Clearly mention the key attributes of each product (e.g., price, brand, features) in the response.",
+        "Format the recommendations neatly and ensure clarity for ease of user understanding.",
+    ],
+    tools = [FirecrawlTools()],
+    markdown = True,
+    show_tool_calls = True
+)
+
 search_agent = Agent(
     name = "Baidu Search Agent",
     tools = [BaiduSearch()],
@@ -50,37 +67,11 @@ router = Agent(
     team = [wiki_agent, crawl_agent],
     instructions = [
         "when the user asks 'what is k?' send to Wikipedia agent.",
-        "When the user ask 'suggets products for k' send to Baidu Search Agent",
+        "When the user asks 'suggets products for k' send to Baidu Search Agent.",
+        "When the user asks 'recommend/suggest x for y type skin' send to Shopping agent. ",
         "Else send to Crawl4AI Agent",
         "if the user asks multiple questions at once, then return a combined, coherent answer.",
     ],
     show_tool_calls = True,
     markdown = True,
 )
-
-# router.print_response("Does retinol help to reduce acne?", stream=True)
-# response = router.run("What does a toner do? suggest a toner for combination skin.")
-# print(response.content)
-
-# def get_answer(query):
-#     response = router.run(query)
-#     return response.content
-
-# def main():
-#     st.set_page_config(page_title = "Skincare Agentic AI", layout = "centered")
-#     st.markdown("""
-#     <div style="background-color:#f0e5f5;padding:10px;border-radius:10px">
-#         <h2 style="color:#5e548e;text-align:center;">Skincare Query Resolver (Agentic AI)</h2>
-#     </div>
-#     """, unsafe_allow_html=True)
-
-#     query = st.text_input("Ask your skincare-related question:")
-
-#     if st.button("Submit"):
-#         with st.spinner("Thinking..."):
-#             answer = get_answer(query)
-#             st.success("Asnwer:")
-#             st.markdown(answer, unsafe_allow_html=True)
-
-# if __name__ == '__main__':
-#     main()
