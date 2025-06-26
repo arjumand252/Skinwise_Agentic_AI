@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import './App.css';
 
 function App() {
@@ -36,9 +38,11 @@ function App() {
     };
 
     return (
-        <div className= {`container ${response ? 'shrink' : 'hero' }`}>
+        <div className= "container">
+            <div className='hero-section'>
             <h1> Skinwise </h1>
             <h2> Your Smart Agentic AI Skincare Assistant </h2>
+            </div>
             <form onSubmit={handleSubmit}>
                 <input
                 type='text'
@@ -53,8 +57,8 @@ function App() {
             {error && <div className='error'> {error} </div>}
             {response && (
                 <div className="response">
-                  <h3>✅ Response:</h3>
-                  <div dangerouslySetInnerHTML={{ __html: response }} />
+                  <h3>Response:</h3>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{response}</ReactMarkdown>
                 </div>
             )}
         </div>

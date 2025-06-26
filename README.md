@@ -8,7 +8,7 @@ Frontend: React, Custom CSS
 
 Backend: Flask (Python), Phidata, Groq
 
-AI Agents: WikipediaTool, Crawl4aiTools, SerpAPI 
+AI Agents: WikipediaTool, Crawl4aiTools, SerpAPI, Firecrawl
 
 Model: LLaMA 3.3 70B via Groq API 
 
@@ -20,6 +20,8 @@ Model: LLaMA 3.3 70B via Groq API
 
 - 🌐 Crawls trusted sources using `Crawl4aiTools`
 
+- 🛍️ Crawls popular E-commerce sites to search for the best skincare products using `Firecrawl`.
+
 - 🤖 Built on the powerful `LLaMA 3.3 70B` model via `Groq`
 
 - 🧠 Agentic task routing via a `Query Analyzer Agent`
@@ -29,10 +31,14 @@ Model: LLaMA 3.3 70B via Groq API
 
 ## 📸 Preview
 
+![Skinwise UI Preview 1](skincare_3.png)
+
 ![Skinwise UI Preview 2](skinwise_1.gif)
 
+![Skinwise UI Preview 3](skinwise_5.png)
 
-![Skinwise UI Preview](skinwise_2.gif)
+<!-- 
+![Skinwise UI Preview](skinwise_2.gif) -->
 
 ---
 

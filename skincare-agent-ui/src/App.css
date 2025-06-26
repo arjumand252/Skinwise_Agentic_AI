@@ -5,37 +5,56 @@ html, body, #root {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, #4f5661 , #06090b );
+  background: linear-gradient(165deg, white, #70ac82);
   font-family: 'Manrope', sans-serif;
-  color: #fff;
+  font-size: 18px;
+  color: #1B4332;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* Heading style */
 /* Typography updates */
 h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 4.5rem; /* Increase from default */
+  font-size: 4.7rem; /* Increase from default */
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 p {
   font-family: 'Manrope', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
-h2, h3 {
+h2{
   font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+h3{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
@@ -76,18 +95,27 @@ input::placeholder {
 .container {
   width: 90vw;
   max-width: 1000px;
+  margin: 40px auto;
+  /* min-height: 100vh; */
+  padding: 1rem;
+  overflow-y: auto;
+  max-width: 1000px;
   border-radius: 24px;
-  background-color: #1E1E1E;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #7c925a;
-  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px #2d72517a;
+  padding: 40px 30px;
   transition: all 0.5s ease;
   text-align: center;
+  height: auto;
 }
 
 /* Big "hero" state */
 .container.hero {
-  height: 80vh;
+  height: 60vh;
+  width: 80vw;
+  max-width: 800px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,6 +125,7 @@ input::placeholder {
 .container.shrink {
   margin-top: 40px;
   height: auto;
+  border-radius: 20px 20px 10px 10px;
 }
 .input-button-wrapper {
   display: flex;
@@ -115,17 +144,19 @@ input[type="text"] {
   border: none;
   outline: none;
   margin-top: 20px;
-  background-color: #1e1e1e;
-  color: #fff;
-  box-shadow: 0 0 0 1px #888;
+  background-color: whitesmoke;
+  color: #123524 ;
+  box-shadow: 0 0 0 1.5px #888;
 }
+
+
 
 button {
   margin-top: 20px;
   margin-left: 20px;
   padding: 12px 30px;
-  font-size: 1rem;
-  background: #7c925a;
+  font-size: 1.1rem;
+  background: #5ead8b;
   border: none;
   color: white;
   border-radius: 12px;
@@ -134,11 +165,53 @@ button {
 }
 
 button:hover {
-  background: #a71ce0;
+  background: #1b7b51;
 }
 
 .response {
   text-align: left;
   margin-top: 30px;
-  color: #ddd;
+  color: #123524;
+}
+.response h2, .response h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+.response p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.resposen ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+.response li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section {
+  position: relative;
+  padding: 40px 20px;
+  z-index: 1;
+}
+.hero-section::before {
+  content: "";
+  background-image: url('C:\Users\Lenovo\ProjData\agenticAI\skincare-agent-ui\multiple palm fronts.png'); /* Put your faded image in public/ folder */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }

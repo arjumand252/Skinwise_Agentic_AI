@@ -68,10 +68,10 @@ router = Agent(
     instructions = [
         "when the user asks 'what is k?' send to Wikipedia agent.",
         "When the user asks 'suggets products for k' send to Baidu Search Agent.",
-        "When the user asks 'recommend/suggest x for y type skin' send to Shopping agent. ",
+        "When the user asks 'recommend/suggest x for y skin' send to Shopping agent. ",
         "Else send to Crawl4AI Agent",
         "if the user asks multiple questions at once, then return a combined, coherent answer.",
     ],
-    show_tool_calls = True,
+    # show_tool_calls = True,
     markdown = True,
 )
