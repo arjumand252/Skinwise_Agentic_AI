@@ -28,6 +28,10 @@ Model: LLaMA 3.3 70B via Groq API
 
 - 💅 Clean React frontend with dynamic UI changes
 
+# Query Processing
+
+![Query processing](flowchart.png)
+
 
 ## 📸 Preview
 
