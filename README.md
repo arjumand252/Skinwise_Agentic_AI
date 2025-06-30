@@ -35,11 +35,17 @@ Model: LLaMA 3.3 70B via Groq API
 
 ## 📸 Preview
 
+Ask any skincare-related query:
+
 ![Skinwise UI Preview 1](skincare_3.png)
+
+Get instant, coherent responses:
 
 ![Skinwise UI Preview 2](skinwise_1.gif)
 
-![Skinwise UI Preview 3](skinwise_5.png)
+Ask for skincare product recommendations: 
+
+![Skinwise UI Preview 3](skincare_5.png)
 
 <!-- 
 ![Skinwise UI Preview](skinwise_2.gif) -->
