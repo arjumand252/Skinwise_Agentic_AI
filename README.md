@@ -30,6 +30,10 @@ Model: LLaMA 3.3 70B via Groq API
 
 # Query Processing
 
+
+![Query processing](flowchart2.png)
+
+
 ![Query processing](flowchart.png)
 
 
