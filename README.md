@@ -3,7 +3,7 @@
 Skinwise is an interactive multi-agent Agentic AI application powered by [PhiData](https://docs.phidata.com/), tailored to answer all your skincare queries using web crawling, Wikipedia, and search engine tools. It features a sleek React frontend and a Python Flask backend.
 
 
-# Tech Stack
+## Tech Stack
 Frontend: React, Custom CSS
 
 Backend: Flask (Python), Phidata, Groq
@@ -12,7 +12,7 @@ AI Agents: WikipediaTool, Crawl4aiTools, SerpAPI, Firecrawl
 
 Model: LLaMA 3.3 70B via Groq API 
 
-# Features
+## Features
 
 - 🔍 Classifies user queries: ingredients, product suggestions, routines, comparisons, etc.
   
@@ -28,11 +28,14 @@ Model: LLaMA 3.3 70B via Groq API
 
 - 💅 Clean React frontend with dynamic UI changes
 
-# Query Processing
+## Query Processing
 
+### High Level Design
 
 ![Query Processing2](flowchart2.png)
 
+
+### Low Level Design
 
 ![Query processing](flowchart.png)
 
