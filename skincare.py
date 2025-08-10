@@ -64,7 +64,7 @@ search_agent = Agent(
 router = Agent(
     name = "Skincare Router",
     model = Groq(id = "llama-3.3-70b-versatile"),
-    team = [wiki_agent, crawl_agent],
+    team = [wiki_agent, crawl_agent, ecom_agent, search_agent],
     instructions = [
         "when the user asks 'what is k?' send to Wikipedia agent.",
         "When the user asks 'suggets products for k' send to Baidu Search Agent.",
